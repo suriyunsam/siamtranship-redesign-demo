@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
@@ -52,6 +52,8 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 @media (max-width:1000px){header .wide{height:auto !important;flex-wrap:wrap}header .wide>a,header .wide>div{min-height:52px;display:flex;align-items:center}.navlinks{display:flex !important;order:3;width:100%;overflow-x:auto;gap:22px;padding:0 0 12px;white-space:nowrap;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}[style*="padding: 56px 48px"]{padding:44px 28px !important}#sellers h3{font-size:32px !important}}
 /* Foldable cover screens and very narrow phones (<=360px) */
 @media (max-width:360px){.hd{font-size:34px}.h2{font-size:26px}.sub{font-size:17px}.wrap,.wide{padding:0 12px}header .wide>a>span{display:none}.pill{padding:0 18px;font-size:16px}.card-pad{padding:16px !important}.strip-pad{padding:14px 16px !important}.keep3{font-size:12px !important;gap:6px !important}.q-total [aria-live]{font-size:40px !important}[style*="padding: 8px 32px"]{padding:4px 16px !important}[style*="font-size: 64px"]{font-size:48px !important}[style*="font-size: 40px; font-weight: 700"]{font-size:30px !important}[style*="font-size: 44px; font-weight: 700"]{font-size:36px !important}.vids>figure{flex-basis:180px !important}.vids{margin:0 -12px !important;padding:0 12px 8px !important}[style*="padding: 40px 24px"],[style*="padding: 56px 48px"]{padding:32px 18px !important}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}.blink{animation:blink 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.blink{animation:none}}
 </style>
 
 </head>
@@ -193,12 +195,13 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 <div style="font-size: 17px; color: #A1A1A6; font-weight: 500">เที่ยวบินรวมรอบละครั้ง</div>
 <div><div style="font-size: 64px; font-weight: 700; letter-spacing: -.04em; line-height: 1">2 สัปดาห์</div><div style="font-size: 17px; color: #A1A1A6; margin-top: 8px">ต่อหนึ่งรอบส่ง</div></div>
 </div>
-<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
-<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">กรุงเทพฯ สู่สหรัฐฯ</div>
-<div style="display: flex; align-items: center; gap: 14px">
-<span style="font-size: 40px; font-weight: 700; letter-spacing: -.03em">BKK</span>
-<svg viewBox="0 0 100 24" style="flex: 1; height: 24px; min-width: 0" aria-hidden="true"><path d="M2 20 Q50 -6 98 20" fill="none" stroke="#FF6B78" stroke-width="2" stroke-dasharray="3 5"></path></svg>
-<span style="font-size: 40px; font-weight: 700; letter-spacing: -.03em">USA</span>
+<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">ตารางเที่ยวบิน</div>
+<div style="display: flex; flex-direction: column; gap: 9px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px">
+<div style="display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: baseline; border-bottom: 1px solid #2C2C2E; padding-bottom: 9px"><span style="color: #8E8E95">ต้นทาง</span><span style="font-size: 20px; font-weight: 500; color: #F5F5F7">BKK <span style="font-size: 12px; color: #A1A1A6">กรุงเทพฯ</span></span></div>
+<div style="display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: baseline; border-bottom: 1px solid #2C2C2E; padding-bottom: 9px"><span style="color: #8E8E95">ปลายทาง</span><span style="font-size: 20px; font-weight: 500; color: #F5F5F7">USA <span style="font-size: 12px; color: #A1A1A6">ถึงหน้าบ้าน</span></span></div>
+<div style="display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: baseline; border-bottom: 1px solid #2C2C2E; padding-bottom: 9px"><span style="color: #8E8E95">รอบถัดไป</span><span style="color: #F5F5F7">[วันที่]</span></div>
+<div style="display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: baseline"><span style="color: #8E8E95">สถานะ</span><span style="color: #34C759"><span class="blink">●</span> เปิดรับจอง</span></div>
 </div>
 </div>
 <div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
