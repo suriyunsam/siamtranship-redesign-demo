@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Siam Tranship — homepage redesign demo</title>
+<meta name="description" content="Design demo of the Siam Tranship homepage redesign. Not the live site.">
+<link rel="icon" href="https://www.siamtranship.com/logo-fish-mark.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark}
+body{margin:0;background:#000000;color:#F5F5F7;font-family:Inter,-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+a{color:#FF6B78}a:hover{color:#FF8E98}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.wide{max-width:1240px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.hd{font-size:80px;line-height:1.05;letter-spacing:-.035em;font-weight:700}
+.h2{font-size:56px;line-height:1.07;letter-spacing:-.03em;font-weight:700}
+.sub{font-size:24px;line-height:1.35;letter-spacing:-.015em;font-weight:500}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;gap:20px}
+.span2{grid-column:span 2}
+.row2{grid-row:span 2}
+.vids{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.g-ask{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px}
+.g-foot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.navlinks{display:flex;gap:30px;align-items:center}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:500;font-size:17px;text-decoration:none;box-sizing:border-box}
+.pill-red{background:#C1303E;color:#FFFFFF}.pill-red:hover{background:#D23947;color:#FFFFFF}
+.pill-line{border:1px solid rgba(255,255,255,.4);color:#F5F5F7}.pill-line:hover{background:#F5F5F7;color:#000000}
+.chip:hover{background:#2C2C2E !important}
+.tile:hover{background:#232325 !important}
+:focus-visible{outline:2px solid #FF6B78;outline-offset:3px}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+@media (max-width:1000px){.g3,.g-ask{grid-template-columns:minmax(0,1fr)}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.g-foot{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{display:none}.hd{font-size:56px}.h2{font-size:40px}.sub{font-size:20px}.vids{display:flex;overflow-x:auto;margin:0 -32px;padding:0 32px 8px}.vids>figure{flex:0 0 220px}}
+@media (max-width:640px){.g2,.g4,.g-foot,.bento{grid-template-columns:minmax(0,1fr)}.span2{grid-column:auto}.row2{grid-row:auto}.wrap,.wide{padding:0 16px}.hd{font-size:44px}.h2{font-size:32px}}
+</style>
+
+</head>
+<body>
+<div style="background:#3A1219;color:#F2B8BE;font-size:13px;text-align:center;padding:8px 16px;line-height:1.5">Redesign demo — not the live booking site. Prices use the current rate table; dates marked [Date] fill in from the schedule. <a href="https://www.siamtranship.com" style="color:#FFFFFF">Go to siamtranship.com ›</a></div>
+
+<div style="background: #000000; color: #F5F5F7">
+
+<!-- Global nav -->
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(0,0,0,.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(255,255,255,.08)">
+<div class="wide" style="height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #F5F5F7">
+<img src="https://www.siamtranship.com/logo-fish-mark.jpg" alt="" style="width: 24px; height: 24px; border-radius: 6px; object-fit: cover">
+<span style="font-weight: 600; font-size: 14px; letter-spacing: .08em">SIAM TRANSHIP</span>
+</a>
+<nav class="navlinks" aria-label="Main" style="font-size: 13px">
+<a href="#price" style="text-decoration: none; color: #D2D2D7">Pricing</a>
+<a href="#how" style="text-decoration: none; color: #D2D2D7">How it works</a>
+<a href="#species" style="text-decoration: none; color: #D2D2D7">Species</a>
+<a href="#sellers" style="text-decoration: none; color: #D2D2D7">For sellers</a>
+<a href="#wholesale" style="text-decoration: none; color: #D2D2D7">Wholesale</a>
+<a href="https://www.siamtranship.com/track" style="text-decoration: none; color: #D2D2D7">Track</a>
+<a href="#ask" style="text-decoration: none; color: #D2D2D7">Support</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 14px">
+<a href="#top" style="text-decoration: none; font-size: 13px; color: #D2D2D7">ไทย</a>
+<a class="pill pill-red" href="https://www.siamtranship.com/order" style="min-height: 32px; padding: 0 14px; font-size: 13px">Book</a>
+</div>
+</div>
+</header>
+
+<!-- Hero -->
+<section id="top" style="background: #000000; text-align: center; overflow: hidden">
+<div class="wrap rise" style="padding-top: 88px; display: flex; flex-direction: column; align-items: center; gap: 14px">
+<div style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: #A1A1A6">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #34C759"></span>
+Booking open · Next departure [Date]
+</div>
+<h1 class="hd" style="margin: 0; max-width: 14ch">Freshwater fish transhipping.</h1>
+<p class="sub" style="margin: 0; color: #A1A1A6; max-width: 30ch">From any Thai seller to your door in the USA.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 14px">
+<a class="pill pill-red" href="https://www.siamtranship.com/order">Book a shipment</a>
+<a class="pill pill-line" href="#price">Get a price</a>
+</div>
+</div>
+<img src="https://www.siamtranship.com/homepage/banner-hero.webp" alt="Siam Tranship freighter lifting off at sunset, carrying freshwater fish from Bangkok to the USA" style="display: block; width: 100%; max-width: 1600px; margin: 40px auto 0; height: 560px; object-fit: cover; object-position: center 42%">
+</section>
+
+<!-- Price -->
+<section id="price" style="background: #101012; padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; gap: 48px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0; max-width: 16ch">Know your price before you book.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6; max-width: 34ch">Pick your state and how many fish. That's it.</p>
+</div>
+<div style="width: 100%; max-width: 880px; background: #1C1C1E; border: 1px solid rgba(255,255,255,.06); border-radius: 28px; box-shadow: 0 24px 60px rgba(0,0,0,.5); overflow: hidden">
+<div style="padding: 36px; display: flex; flex-direction: column; gap: 28px">
+<div class="g3" style="gap: 16px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="ship-to" style="font-size: 14px; font-weight: 500; color: #A1A1A6">Ship to</label>
+<select id="ship-to" style="background: #2C2C2E; color: #F5F5F7; border: 1px solid transparent; border-radius: 14px; padding: 0 14px; height: 56px; font: inherit; font-size: 17px"></select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span id="fish-label" style="font-size: 14px; font-weight: 500; color: #A1A1A6">Fish</span>
+<div role="group" aria-labelledby="fish-label" style="display: flex; align-items: center; justify-content: space-between; background: #2C2C2E; border-radius: 14px; height: 56px; padding: 0 6px">
+<button type="button" aria-label="One fish fewer" id="dec" style="width: 44px; height: 44px; border-radius: 50%; background: #48484A; border: none; color: #F5F5F7; font-size: 22px; cursor: pointer">−</button>
+<span aria-live="polite" style="font-size: 19px; font-weight: 600"><span data-b="n"></span></span>
+<button type="button" aria-label="One fish more" id="inc" style="width: 44px; height: 44px; border-radius: 50%; background: #48484A; border: none; color: #F5F5F7; font-size: 22px; cursor: pointer">+</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; text-align: right">
+<span style="font-size: 14px; font-weight: 500; color: #A1A1A6">Total</span>
+<span aria-live="polite" style="font-size: 48px; line-height: 1.1; font-weight: 700; letter-spacing: -.03em"><span data-b="total"></span></span>
+</div>
+</div>
+<div class="g3" style="gap: 16px; font-size: 15px; color: #A1A1A6; border-top: 1px solid #2C2C2E; padding-top: 22px">
+<div>Zone<br><span style="color: #F5F5F7; font-weight: 500"><span data-b="zone"></span></span></div>
+<div>Shipping<br><span style="color: #F5F5F7; font-weight: 500"><span data-b="shipping"></span></span></div>
+<div style="text-align: right">Handling<br><span style="color: #F5F5F7; font-weight: 500"><span data-b="handling"></span></span></div>
+</div>
+<a class="pill pill-red" href="https://www.siamtranship.com/order" style="width: 100%; min-height: 56px">Book with this price</a>
+</div>
+<div id="schedule" class="g3" style="gap: 16px; background: #161618; border-top: 1px solid #2C2C2E; padding: 20px 36px; font-size: 14px; color: #A1A1A6">
+<div>Departs<br><span style="color: #F5F5F7; font-weight: 600">[Date]</span></div>
+<div style="text-align: center">Booking cut-off<br><span style="color: #F5F5F7; font-weight: 600">[Date], 23:59 ICT</span></div>
+<div style="text-align: right">Slots left<br><span style="color: #F5F5F7; font-weight: 600">[N] of 500</span></div>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #A1A1A6; text-align: center; max-width: 60ch">Fish are paid directly to your Thai seller. Siam Tranship is a transhipping service, not a fish retailer. Handling is $5 per fish — your first two fish together are $5.</p>
+</div>
+</section>
+
+<!-- Unboxing -->
+<section style="background: #000000; padding: 120px 0">
+<div class="wide" style="display: flex; flex-direction: column; gap: 48px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0">Straight from the box.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6; max-width: 36ch">Buyers across the US, filming the moment they open it.</p>
+</div>
+<div class="vids">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/myaandpatricia.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/5-d4YurAXvGVfDftQZYc3pSGE4RoJ5xH.mp4" aria-label="Unboxing video by @mya.and.patricia: a betta from Thailand with its still-warm heat pack" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.45">“The heat pack he came with was still super warm.”</span><span style="font-size: 13px; color: #A1A1A6">@mya.and.patricia</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/kristinsfish.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/1-i5lFhdVwP2yXGyEjjOiMgP5VZGiGHu.mp4" aria-label="Video by @kristinsfish: a dumbo betta from Thailand in a planted tank" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.45">“He arrived healthy and active and was packaged so well!!”</span><span style="font-size: 13px; color: #A1A1A6">@kristinsfish</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/waterwondersss.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/3-612H9wJsBL1o3BvP0B53Ry0VSBj2Ul.mp4" aria-label="Video by @waterwondersss: a betta shortly after delivery in the USA" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.45">“He arrived on time and was a nice delivery experience.”</span><span style="font-size: 13px; color: #A1A1A6">@waterwondersss</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/lexisbettalife.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/4-1nQ6WPClIFiVPrBTxG9Q2A7Qmd1ViL.mp4" aria-label="Unboxing video by @lexis.betta.life: a betta unboxed at a US doorstep" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.45">“I had no idea what he'd look like until he arrived. He's perfect.”</span><span style="font-size: 13px; color: #A1A1A6">@lexis.betta.life</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/thebettababes.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/2-Hukhqd8bOGfxCK2ZfSWfsQ7x79q20t.mp4" aria-label="Video by @thebettababes: a betta settling into a planted aquarium" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.45">“Thank you for this gorgeous fish — he is settling in very nicely.”</span><span style="font-size: 13px; color: #A1A1A6">@thebettababes</span></figcaption>
+</figure>
+</div>
+<div style="text-align: center"><a href="https://www.siamtranship.com/reviews" style="font-size: 17px; text-decoration: none">See all reviews ›</a></div>
+</div>
+</section>
+
+<!-- Why: bento -->
+<section style="background: #101012; padding: 120px 0">
+<div class="wide" style="display: flex; flex-direction: column; gap: 48px">
+<h2 class="h2" style="margin: 0; text-align: center">Built for live cargo.</h2>
+<div class="bento">
+<div class="span2 row2" style="position: relative; border-radius: 28px; overflow: hidden; background: #1C1C1E">
+<img src="https://www.siamtranship.com/homepage/packing-bettas.jpg" alt="Staff packing bagged bettas into an insulated export box at the Bangkok facility" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 32px; background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.78)); color: #F5F5F7">
+<div style="font-size: 32px; font-weight: 700; letter-spacing: -.02em">Packed in Bangkok.</div>
+<div style="font-size: 17px; color: #D2D2D7; margin-top: 6px">Oxygen-packed, in insulated export boxes, documented for US customs.</div>
+</div>
+</div>
+<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">One consolidated flight</div>
+<div><div style="font-size: 64px; font-weight: 700; letter-spacing: -.04em; line-height: 1">2 weeks</div><div style="font-size: 17px; color: #A1A1A6; margin-top: 8px">between departures.</div></div>
+</div>
+<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">Bangkok to the USA</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span style="font-size: 40px; font-weight: 700; letter-spacing: -.03em">BKK</span>
+<svg viewBox="0 0 100 24" style="flex: 1; height: 24px; min-width: 0" aria-hidden="true"><path d="M2 20 Q50 -6 98 20" fill="none" stroke="#FF6B78" stroke-width="2" stroke-dasharray="3 5"></path></svg>
+<span style="font-size: 40px; font-weight: 700; letter-spacing: -.03em">USA</span>
+</div>
+</div>
+<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">Your choice of seller</div>
+<div style="font-size: 30px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15">Any breeder or shop in Thailand.</div>
+</div>
+<div class="tile" style="background: #1C1C1E; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #A1A1A6; font-weight: 500">Always in the loop</div>
+<div style="font-size: 30px; font-weight: 700; letter-spacing: -.02em; line-height: 1.15">Email updates at every stage.</div>
+</div>
+<div style="background: #3A1219; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between">
+<div style="font-size: 17px; color: #F2B8BE; font-weight: 500">Track a shipment</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<label for="track-no" style="font-size: 14px; color: #F2B8BE">Order number</label>
+<div style="display: flex; gap: 8px">
+<input id="track-no" placeholder="ST0000" style="flex: 1; min-width: 0; background: rgba(0,0,0,.35); color: #F5F5F7; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 0 14px; height: 48px; font: inherit; font-size: 17px">
+<a class="pill pill-red" href="https://www.siamtranship.com/track" style="min-height: 48px; padding: 0 18px">Track</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- How it works -->
+<section id="how" style="background: #000000; padding: 120px 0">
+<div class="wide" style="display: flex; flex-direction: column; gap: 56px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0">Four steps. We do three.</h2>
+<a href="https://www.siamtranship.com/how-it-works" style="font-size: 17px; text-decoration: none">Learn more about the process ›</a>
+</div>
+<ol class="g4" style="margin: 0; padding: 0; list-style: none">
+<li style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #FF6B78; padding-top: 20px"><span style="font-size: 15px; font-weight: 600; color: #FF6B78">You</span><span style="font-size: 22px; font-weight: 600; letter-spacing: -.015em">Buy from a Thai seller.</span><span style="font-size: 17px; line-height: 1.5; color: #A1A1A6">Pick any breeder or shop and pay them directly.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #3A3A3C; padding-top: 20px"><span style="font-size: 15px; font-weight: 600; color: #A1A1A6">Us</span><span style="font-size: 22px; font-weight: 600; letter-spacing: -.015em">Booked online.</span><span style="font-size: 17px; line-height: 1.5; color: #A1A1A6">Your seller, your US address, a departure. PayPal or card.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #3A3A3C; padding-top: 20px"><span style="font-size: 15px; font-weight: 600; color: #A1A1A6">Us</span><span style="font-size: 22px; font-weight: 600; letter-spacing: -.015em">Packed and flown.</span><span style="font-size: 17px; line-height: 1.5; color: #A1A1A6">Collected in Bangkok, packed, documented and put on the flight.</span></li>
+<li style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #3A3A3C; padding-top: 20px"><span style="font-size: 15px; font-weight: 600; color: #A1A1A6">Us</span><span style="font-size: 22px; font-weight: 600; letter-spacing: -.015em">Delivered.</span><span style="font-size: 17px; line-height: 1.5; color: #A1A1A6">Cleared in the US and handed to a domestic courier.</span></li>
+</ol>
+</div>
+</section>
+
+<!-- Buyers / Sellers -->
+<section id="sellers" style="background: #101012; padding: 120px 0">
+<div class="wide g2" style="gap: 20px">
+<div style="background: #1C1C1E; border-radius: 28px; padding: 56px 48px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<span style="font-size: 17px; font-weight: 600; color: #FF6B78">For buyers in the US</span>
+<h3 style="margin: 0; font-size: 40px; font-weight: 700; letter-spacing: -.03em; line-height: 1.1">Already bought your fish?</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #A1A1A6; max-width: 30ch">Tell us your seller and your address. We handle the rest.</p>
+<a class="pill pill-red" href="https://www.siamtranship.com/order" style="margin-top: 10px">Book your shipment</a>
+</div>
+<div style="background: #1C1C1E; border-radius: 28px; padding: 56px 48px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<span style="font-size: 17px; font-weight: 600; color: #FF6B78">For sellers in Thailand</span>
+<h3 style="margin: 0; font-size: 40px; font-weight: 700; letter-spacing: -.03em; line-height: 1.1">Selling to the USA?</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.5; color: #A1A1A6; max-width: 32ch">Send your customer our booking link and drop the fish in Bangkok. Service fee ฿80 per fish.</p>
+<a class="pill pill-line" href="https://www.siamtranship.com/for-sellers" style="margin-top: 10px">Seller guide</a>
+</div>
+</div>
+</section>
+
+<!-- Species -->
+<section id="species" style="background: #000000; padding: 120px 0">
+<div class="wide" style="display: flex; flex-direction: column; gap: 48px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0">What we fly.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6">Freshwater ornamentals, packed for the long haul.</p>
+</div>
+<div class="g4">
+<article style="background: #1C1C1E; border-radius: 28px; overflow: hidden; text-align: center">
+<img src="https://www.siamtranship.com/homepage/betta.webp" alt="Betta fish" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: #FF6B78">Most booked</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.02em">Betta</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #A1A1A6">Plakat, Halfmoon, Koi, Giant, Wild, Alien and more.</p></div>
+</article>
+<article style="background: #1C1C1E; border-radius: 28px; overflow: hidden; text-align: center">
+<img src="https://www.siamtranship.com/homepage/guppy.webp" alt="Guppy fish" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: #A1A1A6">Pairs &amp; trios</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.02em">Guppy</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #A1A1A6">Pairs, trios or small groups from Thai breeders.</p></div>
+</article>
+<article style="background: #1C1C1E; border-radius: 28px; overflow: hidden; text-align: center">
+<img src="https://www.siamtranship.com/homepage/flowerhorn.webp" alt="Flowerhorn" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: #A1A1A6">By request</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.02em">Flowerhorn</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #A1A1A6">Custom pricing by size and box space.</p></div>
+</article>
+<article style="background: #1C1C1E; border-radius: 28px; overflow: hidden; text-align: center">
+<img src="https://www.siamtranship.com/homepage/other-fish.webp" alt="Other freshwater ornamental fish" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block">
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; color: #A1A1A6">By request</span><h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -.02em">Other freshwater</h3><p style="margin: 0; font-size: 15px; line-height: 1.5; color: #A1A1A6">Ask us before you buy.</p></div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Zones -->
+<section id="pricing" style="background: #101012; padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; gap: 48px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0">From $37.90. All in.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6; max-width: 34ch">One fish, shipping and handling, by delivery zone.</p>
+</div>
+<div style="width: 100%; max-width: 720px; background: #1C1C1E; border-radius: 28px; padding: 8px 32px">
+<div style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #2C2C2E; font-size: 19px"><span>Southeast</span><span style="font-weight: 600">$37.90</span></div>
+<div style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #2C2C2E; font-size: 19px"><span>Northeast</span><span style="font-weight: 600">$47.95</span></div>
+<div style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #2C2C2E; font-size: 19px"><span>Midwest &amp; Texas</span><span style="font-weight: 600">$52.90</span></div>
+<div style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #2C2C2E; font-size: 19px"><span>Mountain</span><span style="font-weight: 600">$52.90</span></div>
+<div style="display: flex; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #2C2C2E; font-size: 19px"><span>Desert Southwest</span><span style="font-weight: 600">$52.90</span></div>
+<div style="display: flex; justify-content: space-between; padding: 20px 0; font-size: 19px"><span>Pacific</span><span style="font-weight: 600">$52.90</span></div>
+</div>
+<a href="https://www.siamtranship.com/pricing" style="font-size: 17px; text-decoration: none">See prices for more fish ›</a>
+</div>
+</section>
+
+<!-- Ask -->
+<section id="ask" style="background: #000000; padding: 120px 0">
+<div class="wide" style="display: flex; flex-direction: column; gap: 48px">
+<div style="text-align: center; display: flex; flex-direction: column; gap: 14px; align-items: center">
+<h2 class="h2" style="margin: 0">Questions? Ask.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6">Answers straight from our FAQ.</p>
+</div>
+<div class="g-ask">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<label for="ask-q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search questions</label>
+<input id="ask-q" placeholder="Search — price, seller, arrival…" style="background: #1C1C1E; color: #F5F5F7; border: 1px solid #2C2C2E; border-radius: 14px; padding: 0 18px; height: 52px; font: inherit; font-size: 17px">
+<div id="faq-list" style="display: contents"></div>
+<p id="no-match" hidden style="margin: 0; font-size: 15px; color: #A1A1A6">Nothing matches that yet. <a href="https://www.siamtranship.com/contact">Ask us directly ›</a></p>
+</div>
+<div aria-live="polite" style="background: #1C1C1E; border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 22px; align-self: start">
+<div style="align-self: flex-end; max-width: 80%; background: #C1303E; color: #FFFFFF; border-radius: 20px 20px 6px 20px; padding: 12px 18px; font-size: 17px"><span data-b="activeQ"></span></div>
+<div style="max-width: 92%; background: #2C2C2E; border-radius: 20px 20px 20px 6px; padding: 18px 20px; font-size: 17px; line-height: 1.55"><span data-b="activeA"></span></div>
+<a href="https://www.siamtranship.com/faq" style="font-size: 15px; text-decoration: none">Read the full FAQ ›</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Wholesale -->
+<section id="wholesale" style="background: #101012; padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: center">
+<span style="font-size: 17px; font-weight: 600; color: #FF6B78">Wholesale</span>
+<h2 class="h2" style="margin: 0; max-width: 18ch">Shipping by the box.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6; max-width: 38ch">For stores and resellers. Collected at a US cargo airport.</p>
+</div>
+<div class="g3" style="width: 100%; max-width: 760px">
+<div style="background: #1C1C1E; border-radius: 24px; padding: 32px 20px"><div style="font-size: 15px; color: #A1A1A6">Box M</div><div style="font-size: 44px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px">$290</div></div>
+<div style="background: #1C1C1E; border-radius: 24px; padding: 32px 20px"><div style="font-size: 15px; color: #A1A1A6">Box L</div><div style="font-size: 44px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px">$395</div></div>
+<div style="background: #1C1C1E; border-radius: 24px; padding: 32px 20px"><div style="font-size: 15px; color: #A1A1A6">JUMBO</div><div style="font-size: 44px; font-weight: 700; letter-spacing: -.03em; margin-top: 6px">$480</div></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #A1A1A6; max-width: 56ch">Box price covers transhipping and Thai export handling. Airline freight is paid at the pickup counter.</p>
+<a class="pill pill-line" href="https://www.siamtranship.com/wholesale">Wholesale details</a>
+</div>
+</section>
+
+<!-- Closing -->
+<section style="background: #000000; padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<img src="https://www.siamtranship.com/logo-fish-mark.jpg" alt="" style="width: 56px; height: 56px; border-radius: 14px; object-fit: cover">
+<h2 class="h2" style="margin: 0">Ready when your fish are.</h2>
+<p class="sub" style="margin: 0; color: #A1A1A6">Next departure [Date]. Book before [Date].</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 12px">
+<a class="pill pill-red" href="https://www.siamtranship.com/order">Book a shipment</a>
+<a class="pill pill-line" href="https://www.siamtranship.com/schedule">See all dates</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="background: #101012; color: #A1A1A6; font-size: 12px">
+<div class="wrap" style="padding-top: 24px; padding-bottom: 16px; border-bottom: 1px solid #2C2C2E; line-height: 1.6">Fish are purchased directly from Thai sellers; Siam Tranship provides transhipping and delivery coordination only. Live fish shipments carry risk and live arrival is not guaranteed — see the <a href="https://www.siamtranship.com/shipping-policy">Shipping Policy</a>.</div>
+<div class="wrap g-foot" style="padding-top: 24px; padding-bottom: 24px">
+<nav aria-label="Service" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #F5F5F7">Service</span><a href="https://www.siamtranship.com/schedule" style="text-decoration: none; color: #A1A1A6">Schedule</a><a href="https://www.siamtranship.com/pricing" style="text-decoration: none; color: #A1A1A6">Pricing</a><a href="https://www.siamtranship.com/track" style="text-decoration: none; color: #A1A1A6">Track</a><a href="https://www.siamtranship.com/wholesale" style="text-decoration: none; color: #A1A1A6">Wholesale</a></nav>
+<nav aria-label="Learn" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #F5F5F7">Learn</span><a href="https://www.siamtranship.com/how-it-works" style="text-decoration: none; color: #A1A1A6">How it works</a><a href="https://www.siamtranship.com/fish" style="text-decoration: none; color: #A1A1A6">Species</a><a href="https://www.siamtranship.com/blog" style="text-decoration: none; color: #A1A1A6">Blog</a><a href="https://www.siamtranship.com/faq" style="text-decoration: none; color: #A1A1A6">FAQ</a></nav>
+<nav aria-label="Sellers" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #F5F5F7">Sellers</span><a href="https://www.siamtranship.com/for-sellers" style="text-decoration: none; color: #A1A1A6">Seller guide</a><a href="https://www.siamtranship.com/contact" style="text-decoration: none; color: #A1A1A6">Contact</a></nav>
+<nav aria-label="Policies" style="display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; color: #F5F5F7">Policies</span><a href="https://www.siamtranship.com/shipping-policy" style="text-decoration: none; color: #A1A1A6">Shipping</a><a href="https://www.siamtranship.com/refund-policy" style="text-decoration: none; color: #A1A1A6">Refunds</a><a href="https://www.siamtranship.com/terms" style="text-decoration: none; color: #A1A1A6">Terms</a><a href="https://www.siamtranship.com/privacy" style="text-decoration: none; color: #A1A1A6">Privacy</a></nav>
+</div>
+<div class="wrap" style="padding-top: 16px; padding-bottom: 28px; border-top: 1px solid #2C2C2E; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px"><span>Siam Tranship is operated by Thaibettafish Co., Ltd., Chon Buri, Thailand.</span><span>English · ไทย</span></div>
+</footer>
+</div>
+
+<script>
+
+var TIERS = {
+  SE: [[1,1,32.9],[2,2,42.9],[3,4,53.9],[5,6,69.49],[7,8,78.9],[9,10,93.9],[11,12,105.9],[13,14,117.9],[15,null,145.9]],
+  NE: [[1,1,42.95],[2,2,53.9],[3,4,68.9],[5,6,84.9],[7,8,97.9],[9,10,114.9],[11,12,129.9],[13,14,141.9],[15,null,144.9]],
+  MW: [[1,1,47.9],[2,2,60.9],[3,4,78.9],[5,6,95.9],[7,8,109.9],[9,10,128.9],[11,12,143.9],[13,14,160.45],[15,null,164.9]],
+  MT: [[1,1,47.9],[2,2,55.9],[3,4,78.9],[5,6,98.9],[7,8,112.9],[9,10,129.9],[11,12,144.9],[13,14,160.9],[15,null,165.9]],
+  DS: [[1,1,47.9],[2,2,55.9],[3,4,73.9],[5,6,95.9],[7,8,109.9],[9,10,127.9],[11,12,140.9],[13,14,156.9],[15,null,165.9]],
+  PA: [[1,1,47.9],[2,2,55.9],[3,4,68.9],[5,6,85.9],[7,8,99.9],[9,10,119.9],[11,12,135.9],[13,14,169.9],[15,null,169.9]]
+};
+var ZONE_NAMES = { SE: 'Southeast', NE: 'Northeast', MW: 'Midwest & Texas', MT: 'Mountain', DS: 'Desert Southwest', PA: 'Pacific' };
+var STATES = [['AL','Alabama','SE'],['AK','Alaska','PA'],['AZ','Arizona','DS'],['AR','Arkansas','NE'],['CA','California','PA'],['CO','Colorado','MT'],['CT','Connecticut','NE'],['DE','Delaware','NE'],['DC','District of Columbia','MW'],['FL','Florida','SE'],['GA','Georgia','SE'],['HI','Hawaii','PA'],['ID','Idaho','DS'],['IL','Illinois','MW'],['IN','Indiana','NE'],['IA','Iowa','MW'],['KS','Kansas','MW'],['KY','Kentucky','NE'],['LA','Louisiana','SE'],['ME','Maine','NE'],['MD','Maryland','NE'],['MA','Massachusetts','NE'],['MI','Michigan','NE'],['MN','Minnesota','MW'],['MS','Mississippi','SE'],['MO','Missouri','MW'],['MT','Montana','MT'],['NE','Nebraska','MW'],['NV','Nevada','DS'],['NH','New Hampshire','NE'],['NJ','New Jersey','NE'],['NM','New Mexico','MT'],['NY','New York','NE'],['NC','North Carolina','SE'],['ND','North Dakota','MW'],['OH','Ohio','NE'],['OK','Oklahoma','MW'],['OR','Oregon','PA'],['PA','Pennsylvania','NE'],['RI','Rhode Island','NE'],['SC','South Carolina','SE'],['SD','South Dakota','MW'],['TN','Tennessee','SE'],['TX','Texas','MW'],['UT','Utah','MT'],['VT','Vermont','NE'],['VA','Virginia','SE'],['WA','Washington','PA'],['WV','West Virginia','NE'],['WI','Wisconsin','MW'],['WY','Wyoming','MT']];
+var FAQS = [
+  { q: 'Do you sell fish?', a: 'No. Siam Tranship is a transhipping and coordination service. You buy fish directly from a Thai seller, and we move the shipment to the USA.', k: 'sell retailer buy fish' },
+  { q: 'How much does it cost?', a: 'Shipping depends on your state’s zone and how many fish you send, plus handling of $5 per fish — the first two fish together are $5. One betta to the Southeast is $37.90 all in. The fish price is paid to your seller.', k: 'price cost fee pay how much' },
+  { q: 'Can I use any Thai seller?', a: 'Yes. Buy from any breeder or shop in Thailand, then book with us and give us their details.', k: 'seller breeder shop any' },
+  { q: 'Which species can you ship?', a: 'Betta and guppy are the main species. Flowerhorn is accepted by request with custom pricing. Ask us before you buy if you have something else in mind.', k: 'species betta guppy flowerhorn other' },
+  { q: 'When should I book?', a: 'Before the cut-off shown on the current departure. The Schedule page lists every upcoming departure and its cut-off.', k: 'when book cut-off cutoff date schedule' },
+  { q: 'Is live arrival guaranteed?', a: 'No. Fish travel oxygen-packed in insulated export boxes, but live shipments carry risk and live arrival is not guaranteed. The Shipping Policy explains what happens if something goes wrong.', k: 'arrival doa dead alive guarantee live' },
+  { q: 'What happens after I pay?', a: 'You get a confirmation email, we coordinate drop-off with your Thai seller, and you get updates as your shipment departs and is delivered.', k: 'after pay confirmation update track' }
+];
+function money(v) { return '$' + v.toFixed(2); }
+
+var state = { st: 'VA', n: 4, active: 0, filter: '' };
+function el(id){ return document.getElementById(id); }
+function bind(name, text){ document.querySelectorAll('[data-b="'+name+'"]').forEach(function(e){ e.textContent = text; }); }
+function renderQuote(){
+  var row = STATES.find(function(s){ return s[0] === state.st; }) || STATES[0];
+  var tier = TIERS[row[2]].find(function(t){ return state.n >= t[0] && (t[1] === null || state.n <= t[1]); });
+  var ship = tier ? tier[2] : 0;
+  var handling = state.n <= 2 ? 5 : 5 + (state.n - 2) * 5;
+  bind('n', String(state.n)); bind('zone', ZONE_NAMES[row[2]]); bind('shipping', money(ship)); bind('handling', money(handling)); bind('total', money(ship + handling));
+}
+var CHIP_ON = 'text-align:left;background:#F5F5F7;color:#000;border:none;border-radius:14px;padding:15px 18px;min-height:52px;font:inherit;font-size:17px;font-weight:500;cursor:pointer';
+var CHIP_OFF = 'text-align:left;background:#1C1C1E;color:#F5F5F7;border:none;border-radius:14px;padding:15px 18px;min-height:52px;font:inherit;font-size:17px;cursor:pointer';
+function renderFaq(){
+  var f = state.filter.trim().toLowerCase();
+  var list = el('faq-list'); list.innerHTML = '';
+  var shown = 0;
+  FAQS.forEach(function(x, i){
+    if (f && (x.q + ' ' + x.k).toLowerCase().indexOf(f) === -1) return;
+    shown++;
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = x.q;
+    var on = i === state.active;
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.style.cssText = on ? CHIP_ON : CHIP_OFF;
+    if (!on) b.className = 'chip';
+    b.addEventListener('click', function(){ state.active = i; renderFaq(); });
+    list.appendChild(b);
+  });
+  el('no-match').hidden = shown !== 0;
+  bind('activeQ', FAQS[state.active].q); bind('activeA', FAQS[state.active].a);
+}
+var sel = el('ship-to');
+STATES.forEach(function(s){ var o = document.createElement('option'); o.value = s[0]; o.textContent = s[1]; if (s[0] === state.st) o.selected = true; sel.appendChild(o); });
+sel.addEventListener('change', function(e){ state.st = e.target.value; renderQuote(); });
+el('dec').addEventListener('click', function(){ state.n = Math.max(1, state.n - 1); renderQuote(); });
+el('inc').addEventListener('click', function(){ state.n = Math.min(30, state.n + 1); renderQuote(); });
+el('ask-q').addEventListener('input', function(e){ state.filter = e.target.value; renderFaq(); });
+renderQuote(); renderFaq();
+
+</script>
+</body>
+</html>
