@@ -46,6 +46,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 @media (max-width:640px){.keep3{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px !important;font-size:13px !important}section[style*="padding: 120px 0"]{padding-top:72px !important;padding-bottom:72px !important}.card-pad{padding:22px !important;gap:22px !important}.strip-pad{padding:16px 22px !important}[style*="padding: 56px 48px"]{padding:40px 24px !important}[style*="padding: 40px; display: flex"]{padding:24px !important}.vids{margin:0 -16px !important;padding:0 16px 8px !important}.q-total{text-align:left !important}.hero-img{margin-top:32px;aspect-ratio:16/10;object-position:center 45%}.g2,.g4,.g-foot,.bento{grid-template-columns:minmax(0,1fr)}.span2{grid-column:auto}.row2{grid-row:auto}.wrap,.wide{padding:0 16px}.hd{font-size:44px}.h2{font-size:32px}}
 *{letter-spacing:0 !important}
 .hd{line-height:1.2}.h2{line-height:1.25}h3{line-height:1.3 !important}
+.vid-sound{position:absolute;right:10px;bottom:10px;width:44px;height:44px;border-radius:50%;border:none;background:rgba(0,0,0,.55);color:#FFFFFF;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.vid-sound:hover{background:rgba(0,0,0,.75)}
 </style>
 
 </head>
@@ -106,7 +107,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 <div class="g3" style="gap: 16px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="ship-to" style="font-size: 14px; font-weight: 500; color: #A1A1A6">ส่งไปที่</label>
-<select id="ship-to" style="background: #2C2C2E; color: #F5F5F7; border: 1px solid transparent; border-radius: 14px; padding: 0 14px; height: 56px; font: inherit; font-size: 17px"></select>
+<div style="position: relative"><select id="ship-to" style="appearance: none; -webkit-appearance: none; width: 100%; background: #2C2C2E; color: #F5F5F7; border: 1px solid transparent; border-radius: 14px; padding: 0 48px 0 16px; height: 56px; font: inherit; font-size: 17px; cursor: pointer"></select><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A1A1A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 18px; top: 50%; transform: translateY(-50%); pointer-events: none"><path d="m6 9 6 6 6-6"></path></svg></div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
 <span id="fish-label" style="font-size: 14px; font-weight: 500; color: #A1A1A6">จำนวนปลา</span>
@@ -147,23 +148,23 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 </div>
 <div class="vids">
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/myaandpatricia.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/5-d4YurAXvGVfDftQZYc3pSGE4RoJ5xH.mp4" aria-label="Unboxing video by @mya.and.patricia: a betta from Thailand with its still-warm heat pack" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<div style="position: relative"><video class="auto-vid" muted="" loop="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/myaandpatricia.jpg" data-preview="../previews/myaandpatricia-preview.mp4" data-full="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/5-d4YurAXvGVfDftQZYc3pSGE4RoJ5xH.mp4" aria-label="Unboxing video by @mya.and.patricia: a betta from Thailand with its still-warm heat pack" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video><button type="button" class="vid-sound" aria-label="เล่นพร้อมเสียง"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button></div>
 <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.5">“แผ่นให้ความร้อนที่มากับปลายังอุ่นอยู่เลย”</span><span lang="en" style="font-size: 13px; line-height: 1.45; color: #A1A1A6">“The heat pack he came with was still super warm.”</span><span style="font-size: 13px; color: #A1A1A6">@mya.and.patricia</span></figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/kristinsfish.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/1-i5lFhdVwP2yXGyEjjOiMgP5VZGiGHu.mp4" aria-label="Video by @kristinsfish: a dumbo betta from Thailand in a planted tank" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<div style="position: relative"><video class="auto-vid" muted="" loop="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/kristinsfish.jpg" data-preview="../previews/kristinsfish-preview.mp4" data-full="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/1-i5lFhdVwP2yXGyEjjOiMgP5VZGiGHu.mp4" aria-label="Video by @kristinsfish: a dumbo betta from Thailand in a planted tank" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video><button type="button" class="vid-sound" aria-label="เล่นพร้อมเสียง"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button></div>
 <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.5">“ปลามาถึงแข็งแรง ว่ายคล่อง และแพ็กมาดีมาก!!”</span><span lang="en" style="font-size: 13px; line-height: 1.45; color: #A1A1A6">“He arrived healthy and active and was packaged so well!!”</span><span style="font-size: 13px; color: #A1A1A6">@kristinsfish</span></figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/waterwondersss.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/3-612H9wJsBL1o3BvP0B53Ry0VSBj2Ul.mp4" aria-label="Video by @waterwondersss: a betta shortly after delivery in the USA" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<div style="position: relative"><video class="auto-vid" muted="" loop="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/waterwondersss.jpg" data-preview="../previews/waterwondersss-preview.mp4" data-full="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/3-612H9wJsBL1o3BvP0B53Ry0VSBj2Ul.mp4" aria-label="Video by @waterwondersss: a betta shortly after delivery in the USA" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video><button type="button" class="vid-sound" aria-label="เล่นพร้อมเสียง"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button></div>
 <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.5">“มาถึงตรงเวลา ประสบการณ์รับของดีมาก”</span><span lang="en" style="font-size: 13px; line-height: 1.45; color: #A1A1A6">“He arrived on time and was a nice delivery experience.”</span><span style="font-size: 13px; color: #A1A1A6">@waterwondersss</span></figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/lexisbettalife.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/4-1nQ6WPClIFiVPrBTxG9Q2A7Qmd1ViL.mp4" aria-label="Unboxing video by @lexis.betta.life: a betta unboxed at a US doorstep" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<div style="position: relative"><video class="auto-vid" muted="" loop="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/lexisbettalife.jpg" data-preview="../previews/lexisbettalife-preview.mp4" data-full="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/4-1nQ6WPClIFiVPrBTxG9Q2A7Qmd1ViL.mp4" aria-label="Unboxing video by @lexis.betta.life: a betta unboxed at a US doorstep" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video><button type="button" class="vid-sound" aria-label="เล่นพร้อมเสียง"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button></div>
 <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.5">“ไม่รู้เลยว่าตัวจริงจะเป็นยังไงจนมาถึง สวยสมบูรณ์แบบ”</span><span lang="en" style="font-size: 13px; line-height: 1.45; color: #A1A1A6">“I had no idea what he'd look like until he arrived. He's perfect.”</span><span style="font-size: 13px; color: #A1A1A6">@lexis.betta.life</span></figcaption>
 </figure>
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
-<video controls="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/thebettababes.jpg" src="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/2-Hukhqd8bOGfxCK2ZfSWfsQ7x79q20t.mp4" aria-label="Video by @thebettababes: a betta settling into a planted aquarium" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video>
+<div style="position: relative"><video class="auto-vid" muted="" loop="" playsinline="" preload="none" poster="https://www.siamtranship.com/testimonials/thebettababes.jpg" data-preview="../previews/thebettababes-preview.mp4" data-full="https://c0hwpalndmsg7dcd.public.blob.vercel-storage.com/2-Hukhqd8bOGfxCK2ZfSWfsQ7x79q20t.mp4" aria-label="Video by @thebettababes: a betta settling into a planted aquarium" style="width: 100%; aspect-ratio: 9 / 16; object-fit: cover; display: block; border-radius: 22px; background: #1C1C1E"></video><button type="button" class="vid-sound" aria-label="เล่นพร้อมเสียง"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg></button></div>
 <figcaption style="display: flex; flex-direction: column; gap: 4px; padding: 0 4px"><span style="font-size: 15px; line-height: 1.5">“ขอบคุณสำหรับปลาสวย ๆ ตัวนี้ ตอนนี้ปรับตัวเข้าตู้ได้ดีแล้ว”</span><span lang="en" style="font-size: 13px; line-height: 1.45; color: #A1A1A6">“Thank you for this gorgeous fish — he is settling in very nicely.”</span><span style="font-size: 13px; color: #A1A1A6">@thebettababes</span></figcaption>
 </figure>
 </div>
@@ -427,6 +428,41 @@ el('inc').addEventListener('click', function(){ state.n = Math.min(30, state.n +
 el('ask-q').addEventListener('input', function(e){ state.filter = e.target.value; renderFaq(); });
 renderQuote(); renderFaq();
 
+
+/* Unboxing videos: short silent previews play only while on screen; tapping
+   the speaker swaps in the full clip with sound. Nothing loads until a video
+   is actually in view, and data-saver / reduced-motion visitors get posters. */
+(function(){
+  var vids = [].slice.call(document.querySelectorAll('video.auto-vid'));
+  var conn = navigator.connection || {};
+  var lite = conn.saveData || /(^|-)2g$/.test(conn.effectiveType || '') ||
+    (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function playFull(v){
+    vids.forEach(function(o){ if (o !== v) o.pause(); });
+    v.loop = false; v.muted = false; v.controls = true; v.preload = 'auto';
+    v.src = v.dataset.full; v.classList.add('is-full');
+    var p = v.play(); if (p && p.catch) p.catch(function(){});
+  }
+  vids.forEach(function(v){
+    var b = v.parentNode.querySelector('.vid-sound');
+    if (b) b.addEventListener('click', function(){ playFull(v); b.remove(); });
+  });
+  if (lite || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var v = e.target;
+      if (v.classList.contains('is-full')) return;
+      if (e.isIntersecting && e.intersectionRatio >= 0.5) {
+        if (!v.getAttribute('src')) v.src = v.dataset.preview;
+        var p = v.play(); if (p && p.catch) p.catch(function(){});
+      } else { v.pause(); }
+    });
+  }, { threshold: [0, 0.5] });
+  vids.forEach(function(v){ io.observe(v); });
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) vids.forEach(function(v){ if (!v.classList.contains('is-full')) v.pause(); });
+  });
+})();
 </script>
 </body>
 </html>
