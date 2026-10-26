@@ -52,6 +52,16 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 @media (max-width:360px){.hd{font-size:34px}.h2{font-size:26px}.sub{font-size:17px}.wrap,.wide{padding:0 12px}header .wide>a>span{display:none}.pill{padding:0 18px;font-size:16px}.card-pad{padding:16px !important}.strip-pad{padding:14px 16px !important}.keep3{font-size:12px !important;gap:6px !important}.q-total [aria-live]{font-size:40px !important}[style*="padding: 8px 32px"]{padding:4px 16px !important}[style*="font-size: 64px"]{font-size:48px !important}[style*="font-size: 40px; font-weight: 700"]{font-size:30px !important}[style*="font-size: 44px; font-weight: 700"]{font-size:36px !important}.vids>figure{flex-basis:180px !important}.vids{margin:0 -12px !important;padding:0 12px 8px !important}[style*="padding: 40px 24px"],[style*="padding: 56px 48px"]{padding:32px 18px !important}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}.blink{animation:blink 1.6s ease-in-out infinite}
 @media (prefers-reduced-motion: reduce){.blink{animation:none}}
+
+/* FAQ: two panes on desktop (answer left, questions right); accordion below 1000px so the answer opens under the question */
+.faq-item{border-radius:14px;background:#1C1C1E;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;color:#F5F5F7;border:none;padding:15px 18px;min-height:52px;font:inherit;font-size:17px;cursor:pointer}
+.faq-q:hover{background:#2C2C2E}
+.faq-q svg{flex-shrink:0;transition:transform .2s;display:none}
+.faq-a{display:none;padding:0 18px 18px;font-size:16px;line-height:1.65;color:#C7C7CC}
+.faq-more-m{display:none;font-size:15px;text-decoration:none}
+@media (min-width:1001px){.g-ask{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}.ask-list{order:2}.ask-panel{order:1}.faq-item.is-active{background:#F5F5F7}.faq-item.is-active .faq-q{color:#000000;font-weight:500}.faq-item.is-active .faq-q:hover{background:transparent}}
+@media (max-width:1000px){.ask-panel{display:none !important}.faq-q svg{display:block}.faq-item.is-open .faq-q svg{transform:rotate(180deg)}.faq-item.is-open .faq-a{display:block}.faq-item.is-open .faq-q{font-weight:600}.faq-more-m{display:inline-block;margin-top:4px}}
 </style>
 
 </head>
@@ -313,13 +323,14 @@ Booking open · Next departure [Date]
 <p class="sub" style="margin: 0; color: #A1A1A6">Answers straight from our FAQ.</p>
 </div>
 <div class="g-ask">
-<div style="display: flex; flex-direction: column; gap: 12px">
+<div class="ask-list" style="display: flex; flex-direction: column; gap: 8px">
 <label for="ask-q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search questions</label>
-<input id="ask-q" placeholder="Search — price, seller, arrival…" style="background: #1C1C1E; color: #F5F5F7; border: 1px solid #2C2C2E; border-radius: 14px; padding: 0 18px; height: 52px; font: inherit; font-size: 17px">
+<input id="ask-q" placeholder="Search — price, seller, arrival…" style="background: #1C1C1E; color: #F5F5F7; border: 1px solid #2C2C2E; border-radius: 14px; padding: 0 18px; height: 52px; font: inherit; font-size: 17px; margin-bottom: 4px">
 <div id="faq-list" style="display: contents"></div>
 <p id="no-match" hidden style="margin: 0; font-size: 15px; color: #A1A1A6">Nothing matches that yet. <a href="https://www.siamtranship.com/contact">Ask us directly ›</a></p>
+<a class="faq-more-m" href="https://www.siamtranship.com/faq">Read the full FAQ ›</a>
 </div>
-<div aria-live="polite" style="background: #1C1C1E; border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 22px; align-self: start">
+<div class="ask-panel" aria-live="polite" style="background: #1C1C1E; border-radius: 28px; padding: 40px; display: flex; flex-direction: column; gap: 22px; align-self: start">
 <div style="align-self: flex-end; max-width: 80%; background: #C1303E; color: #FFFFFF; border-radius: 20px 20px 6px 20px; padding: 12px 18px; font-size: 17px"><span data-b="activeQ"></span></div>
 <div style="max-width: 92%; background: #2C2C2E; border-radius: 20px 20px 20px 6px; padding: 18px 20px; font-size: 17px; line-height: 1.55"><span data-b="activeA"></span></div>
 <a href="https://www.siamtranship.com/faq" style="font-size: 15px; text-decoration: none">Read the full FAQ ›</a>
@@ -405,8 +416,9 @@ function renderQuote(){
   var handling = state.n <= 2 ? 5 : 5 + (state.n - 2) * 5;
   bind('n', String(state.n)); bind('zone', ZONE_NAMES[row[2]]); bind('shipping', money(ship)); bind('handling', money(handling)); bind('total', money(ship + handling));
 }
-var CHIP_ON = 'text-align:left;background:#F5F5F7;color:#000;border:none;border-radius:14px;padding:15px 18px;min-height:52px;font:inherit;font-size:17px;font-weight:500;cursor:pointer';
-var CHIP_OFF = 'text-align:left;background:#1C1C1E;color:#F5F5F7;border:none;border-radius:14px;padding:15px 18px;min-height:52px;font:inherit;font-size:17px;cursor:pointer';
+var CHEV = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A1A1A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>';
+var narrow = window.matchMedia('(max-width: 1000px)');
+state.open = 0;
 function renderFaq(){
   var f = state.filter.trim().toLowerCase();
   var list = el('faq-list'); list.innerHTML = '';
@@ -414,14 +426,22 @@ function renderFaq(){
   FAQS.forEach(function(x, i){
     if (f && (x.q + ' ' + x.k).toLowerCase().indexOf(f) === -1) return;
     shown++;
+    var item = document.createElement('div');
+    item.className = 'faq-item' + (i === state.active ? ' is-active' : '') + (i === state.open ? ' is-open' : '');
     var b = document.createElement('button');
-    b.type = 'button'; b.textContent = x.q;
-    var on = i === state.active;
-    b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    b.style.cssText = on ? CHIP_ON : CHIP_OFF;
-    if (!on) b.className = 'chip';
-    b.addEventListener('click', function(){ state.active = i; renderFaq(); });
-    list.appendChild(b);
+    b.type = 'button'; b.className = 'faq-q';
+    b.setAttribute('aria-expanded', i === state.open ? 'true' : 'false');
+    var t = document.createElement('span'); t.textContent = x.q;
+    b.appendChild(t); b.insertAdjacentHTML('beforeend', CHEV);
+    var a = document.createElement('div'); a.className = 'faq-a'; a.textContent = x.a;
+    b.addEventListener('click', function(){
+      // Phones: tap again to close. Desktop: one question is always shown in the answer pane.
+      if (narrow.matches) { state.open = state.open === i ? -1 : i; if (state.open >= 0) state.active = i; }
+      else { state.active = i; state.open = i; }
+      renderFaq();
+    });
+    item.appendChild(b); item.appendChild(a);
+    list.appendChild(item);
   });
   el('no-match').hidden = shown !== 0;
   bind('activeQ', FAQS[state.active].q); bind('activeA', FAQS[state.active].a);
