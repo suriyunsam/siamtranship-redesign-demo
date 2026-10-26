@@ -14,6 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+.hero-img{display:block;width:100%;max-width:1600px;height:auto;max-height:560px;object-fit:cover;object-position:center 42%;margin:40px auto 0}
 body{margin:0;background:#000000;color:#F5F5F7;font-family:Inter,'Noto Sans Thai',-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
 a{color:#FF6B78}a:hover{color:#FF8E98}
 .wrap{max-width:1080px;margin:0 auto;padding:0 32px;box-sizing:border-box}
@@ -40,7 +43,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 .rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
 @media (max-width:1000px){.g3,.g-ask{grid-template-columns:minmax(0,1fr)}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.g-foot{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{display:none}.hd{font-size:56px}.h2{font-size:40px}.sub{font-size:20px}.vids{display:flex;overflow-x:auto;margin:0 -32px;padding:0 32px 8px}.vids>figure{flex:0 0 220px}}
-@media (max-width:640px){.g2,.g4,.g-foot,.bento{grid-template-columns:minmax(0,1fr)}.span2{grid-column:auto}.row2{grid-row:auto}.wrap,.wide{padding:0 16px}.hd{font-size:44px}.h2{font-size:32px}}
+@media (max-width:640px){section[style*="padding: 120px 0"]{padding-top:72px !important;padding-bottom:72px !important}.card-pad{padding:22px !important;gap:22px !important}.strip-pad{padding:16px 22px !important}[style*="padding: 56px 48px"]{padding:40px 24px !important}[style*="padding: 40px; display: flex"]{padding:24px !important}.vids{margin:0 -16px !important;padding:0 16px 8px !important}.q-total{text-align:left !important}.hero-img{margin-top:32px}.g2,.g4,.g-foot,.bento{grid-template-columns:minmax(0,1fr)}.span2{grid-column:auto}.row2{grid-row:auto}.wrap,.wide{padding:0 16px}.hd{font-size:44px}.h2{font-size:32px}}
 *{letter-spacing:0 !important}
 .hd{line-height:1.2}.h2{line-height:1.25}h3{line-height:1.3 !important}
 </style>
@@ -88,7 +91,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 <a class="pill pill-line" href="#price">เช็คราคา</a>
 </div>
 </div>
-<img src="https://www.siamtranship.com/homepage/banner-hero.webp" alt="เครื่องบินขนส่งของ Siam Tranship บินขึ้นยามพระอาทิตย์ตก ขนส่งปลาน้ำจืดจากกรุงเทพฯ สู่สหรัฐอเมริกา" style="display: block; width: 100%; max-width: 1600px; margin: 40px auto 0; height: 560px; object-fit: cover; object-position: center 42%">
+<img class="hero-img" src="https://www.siamtranship.com/homepage/banner-hero.webp" alt="เครื่องบินขนส่งของ Siam Tranship บินขึ้นยามพระอาทิตย์ตก ขนส่งปลาน้ำจืดจากกรุงเทพฯ สู่สหรัฐอเมริกา" width="4500" height="2079">
 </section>
 
 <!-- Price -->
@@ -99,7 +102,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 <p class="sub" style="margin: 0; color: #A1A1A6; max-width: 34ch">เลือกรัฐปลายทางกับจำนวนปลา แค่นั้นเอง</p>
 </div>
 <div style="width: 100%; max-width: 880px; background: #1C1C1E; border: 1px solid rgba(255,255,255,.06); border-radius: 28px; box-shadow: 0 24px 60px rgba(0,0,0,.5); overflow: hidden">
-<div style="padding: 36px; display: flex; flex-direction: column; gap: 28px">
+<div class="card-pad" style="padding: 36px; display: flex; flex-direction: column; gap: 28px">
 <div class="g3" style="gap: 16px; align-items: end">
 <div style="display: flex; flex-direction: column; gap: 8px">
 <label for="ship-to" style="font-size: 14px; font-weight: 500; color: #A1A1A6">ส่งไปที่</label>
@@ -113,7 +116,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 <button type="button" aria-label="เพิ่มจำนวนปลา" id="inc" style="width: 44px; height: 44px; border-radius: 50%; background: #48484A; border: none; color: #F5F5F7; font-size: 22px; cursor: pointer">+</button>
 </div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 4px; text-align: right">
+<div class="q-total" style="display: flex; flex-direction: column; gap: 4px; text-align: right">
 <span style="font-size: 14px; font-weight: 500; color: #A1A1A6">ยอดรวม</span>
 <span aria-live="polite" style="font-size: 48px; line-height: 1.1; font-weight: 700; letter-spacing: -.03em"><span data-b="total"></span></span>
 </div>
@@ -125,7 +128,7 @@ a{color:#FF6B78}a:hover{color:#FF8E98}
 </div>
 <a class="pill pill-red" href="https://www.siamtranship.com/th/order" style="width: 100%; min-height: 56px">จองด้วยราคานี้</a>
 </div>
-<div id="schedule" class="g3" style="gap: 16px; background: #161618; border-top: 1px solid #2C2C2E; padding: 20px 36px; font-size: 14px; color: #A1A1A6">
+<div id="schedule" class="g3 strip-pad" style="gap: 16px; background: #161618; border-top: 1px solid #2C2C2E; padding: 20px 36px; font-size: 14px; color: #A1A1A6">
 <div>วันส่ง<br><span style="color: #F5F5F7; font-weight: 600">[วันที่]</span></div>
 <div style="text-align: center">ปิดรับจอง<br><span style="color: #F5F5F7; font-weight: 600">[วันที่] 23:59 น.</span></div>
 <div style="text-align: right">ที่ว่าง<br><span style="color: #F5F5F7; font-weight: 600">เหลือ [N] จาก 500</span></div>
