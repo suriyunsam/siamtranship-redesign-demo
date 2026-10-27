@@ -47,6 +47,8 @@ a{color:inherit}
 .faq-item.is-open .faq-a{display:block}
 :focus-visible{outline:3px solid #F2B544;outline-offset:3px}
 @media (max-width:1000px){.navlinks{display:none}.h1{font-size:60px}.h2{font-size:44px}.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:minmax(0,1fr) !important}.hero-art{display:none}.price-grid{grid-template-columns:minmax(0,1fr) !important}.vids{display:flex;overflow-x:auto;margin:0 -40px;padding:0 40px 8px}.vids>figure{flex:0 0 220px}.shift{grid-template-columns:minmax(0,1fr) !important}}
+@media (max-width:1000px){header .wrap{height:auto !important;flex-wrap:wrap}header .wrap>a{min-height:64px;display:flex;align-items:center}.navlinks{display:flex !important;order:3;width:100%;overflow-x:auto;gap:10px;padding:0 0 12px;white-space:nowrap;scrollbar-width:none}}
+@media (max-width:400px){header .wrap>a>span{display:none}.hdr-cta{padding:0 14px !important;font-size:12px !important}.h1{font-size:38px !important}.q-total-num{font-size:42px !important}}
 @media (max-width:640px){.wrap{padding:0 18px}.h1{font-size:44px}.h2{font-size:34px}.g2,.g4{grid-template-columns:minmax(0,1fr)}.vids{margin:0 -18px;padding:0 18px 8px}.band{padding-top:72px !important;padding-bottom:72px !important}.faq-q{font-size:18px}.faq-a{font-size:17px}.step{grid-template-columns:56px minmax(0,1fr) !important}.step h3{font-size:26px !important}}
 </style>
 
@@ -66,7 +68,7 @@ a{color:inherit}
 <nav class="navlinks" aria-label="Main" style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase">
 <a href="#how">How it works</a><span aria-hidden="true">·</span><a href="#price">Pricing</a><span aria-hidden="true">·</span><a href="#species">Species</a><span aria-hidden="true">·</span><a href="#wholesale">Wholesale</a><span aria-hidden="true">·</span><a href="#faq">FAQ</a>
 </nav>
-<a class="pill pill-red" href="https://www.siamtranship.com/order" style="min-height: 44px; padding: 0 20px; font-size: 13px">Book a shipment <span aria-hidden="true">→</span></a>
+<a class="pill pill-red hdr-cta" href="https://www.siamtranship.com/order" style="min-height: 44px; padding: 0 20px; font-size: 13px">Book a shipment <span aria-hidden="true">→</span></a>
 </div>
 </header>
 
@@ -186,7 +188,7 @@ a{color:inherit}
 </div>
 <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1.5px solid #0B0B0C; padding-top: 18px">
 <span style="font-family: Archivo, sans-serif; font-weight: 700; font-size: 16px">Total</span>
-<span aria-live="polite" class="disp" style="font-size: 56px"><span data-b="total"></span></span>
+<span aria-live="polite" class="disp q-total-num" style="font-size: 56px"><span data-b="total"></span></span>
 </div>
 <a class="pill pill-ink" href="https://www.siamtranship.com/order" style="justify-content: center">Book with this price <span aria-hidden="true">→</span></a>
 </div>
